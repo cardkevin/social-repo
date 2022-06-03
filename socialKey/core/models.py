@@ -3,14 +3,13 @@ from django.contrib.auth import get_user_model
 from numpy import blackman
 
 
+# Creating the database table
 
 # In django anytime you make changes to your models
 # make migrations
 # -python manage.py makemigrations
 
 ## AFTER YOU HAVE MADE YOUR MIGRATIONS
-# you will sync [I'm not sure if sync is the proper term]
-# your new migrations with your db
 # -python manage.py migrate
 
 ## CREATE AN ADMIN PANEL
