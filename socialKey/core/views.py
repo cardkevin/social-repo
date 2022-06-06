@@ -9,6 +9,7 @@ def index(request):
     return render(request, 'index.html')
 
 
+
 def signup(request):
     
     if request.method == 'POST':
@@ -45,4 +46,5 @@ def signup(request):
 
 
 
-# CURRENT VIDEO TIME IS 1:29:00
+def signin(request):
+    return render(request, 'signin.html')
