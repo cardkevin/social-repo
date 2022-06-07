@@ -1,5 +1,10 @@
 # About
-I'll be following a tutorial made by Tomi. The goal is to practice my django and build on the app. 
+I'll be following a tutorial made by Tomi. The goal is to practice my django and build on the app.
+
+
+# Todos
+- Take advantage of django and modularize the code.
+- separate the css from HTML
 
 ## Tech Stack
 - Django
