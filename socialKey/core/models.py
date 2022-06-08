@@ -25,6 +25,7 @@ class Profile(models.Model):
     bio = models.TextField(blank=True)
     profile_img = models.ImageField(upload_to='profile_images', default='blank-profile-picture.png')
     location = models.CharField(max_length=100, blank=True)
+    
 
     # method to return the object's stored name
     def __str__(self):
