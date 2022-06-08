@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from numpy import blackman
+from datetime import datetime
+import uuid
 
 
 # Creating the database table
@@ -30,3 +32,15 @@ class Profile(models.Model):
     # method to return the object's stored name
     def __str__(self):
         return self.user.username
+
+
+class Post(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    username = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='post_images')
+    caption = models.TextField()
+    created_at = models.DateTimeField(default=datetime.now)
+    num_of_likes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.user
