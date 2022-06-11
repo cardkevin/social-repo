@@ -56,7 +56,6 @@
                     </div>
 
                     <!-- notification contents -->
-                    <form action="">
                         <div class="flex justify-center flex-center text-center">
 
                             <div class="flex flex-col choose-upload text-center">
@@ -68,7 +67,8 @@
                                     </svg>
                                 </div>
 
-                                <form>
+                                <form action="upload" method="POST" enctype="multipart/form-data" >
+                                    {% csrf_token %}
                                     <p class="my-3 leading-6"> Upload Pics</p>
                                     <div>
                                         <input type="file" name="image_upload">
@@ -78,12 +78,13 @@
                                         <button class="bg-blue-700 button" type="submit">Upload</button>
                                     </div>
                                 </form>
+                                
                                 <!-- <a href="#" class="uk-text-muted mt-3 uk-link"
                                     uk-toggle="target: .choose-upload ;  animation: uk-animation-slide-right-small, uk-animation-slide-left-medium; queued: true">
                                     Or Import Video </a> -->
                             </div>
 
-                            <div class="uk-flex uk-flex-column choose-upload" hidden>
+                            <!-- <div class="uk-flex uk-flex-column choose-upload" hidden>
                                 <div class="mx-auto flex flex-col h-24 items-center justify-center relative w-full rounded-lg">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-12">
                                         <path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd" />
@@ -100,10 +101,9 @@
                                 <a href="#" class="uk-text-muted mt-3 uk-link"
                                     uk-toggle="target: .choose-upload ; animation: uk-animation-slide-left-small, uk-animation-slide-right-medium; queued: true">
                                     Or Upload Video </a>
-                            </div>
+                            </div> -->
 
                         </div>
-                    </form>
                     <div class="px-4 py-3 -mx-5 -mb-4 mt-5 border-t text-sm">
                         Your Image size must be maxmium 999MB or lower
                     </div>
